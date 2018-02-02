@@ -1,0 +1,15 @@
+/***********************************
+*	Set Terminal Title
+***********************************/
+
+Simply edit your $HOME/.bashrc file and add the following function:
+
+set-title(){
+  ORIG=$PS1
+  TITLE="\e]2;$@\a"
+  PS1=${ORIG}${TITLE}
+}
+
+Now whenever you want to set the title of your terminal, just enter something like:
+
+set-title "my awesome terminal title"
